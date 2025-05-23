@@ -1,5 +1,5 @@
 # 폴더 구조
-hwp_hwpx_text/
+```hwp_hwpx_text/
 ├── convertorCLI/
 │   ├── .gitignore
 │   ├── HwpConverterCLI.java
@@ -14,7 +14,7 @@ hwp_hwpx_text/
 ├── ConvertMain.class
 ├── ConvertMain.java
 ├── pom.xml
-└── readme.md
+└── readme.md```
 # compile
 [windows]
 javac -cp "..\hwp_server\hwp2hwpx\target\hwp2hwpx-1.0.0.jar;..\hwp_server\hwplib\target\hwplib-1.1.10.jar;..\hwp_server\hwpxlib\target\hwpxlib-1.0.5.jar" HwpxConverterCLI.java
