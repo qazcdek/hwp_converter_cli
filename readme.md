@@ -1,5 +1,6 @@
 # 폴더 구조
-```hwp_hwpx_text/
+```
+root/
 ├── convertorCLI/
 │   ├── .gitignore
 │   ├── HwpConverterCLI.java
