@@ -32,7 +32,7 @@ def convert_hwp_to_text(hwp_path: str, classpath_elements: list[str]) -> str:
 
 # 사용 예시
 if __name__ == "__main__":
-    hwp_file = r"C:\Users\Admin\Desktop\i_bricks\code_space\test_space\storage\hwp_dir\real_01.hwp"  # 또는 Windows 경로
+    hwp_file = r"/data/qazcde/kiat/storage/hwp_dir/250331 (보도자료) 금융 특화 AI 개발의 밑거름을 제공하겠습니다.hwp"  # 또는 Windows 경로
 
     classpath_elements = [
         ".",  # 현재 디렉토리
