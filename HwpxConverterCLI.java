@@ -76,7 +76,7 @@ public class HwpxConverterCLI {
                                     );
 
                                     String tableJson = buildChunkJson(
-                                            page,
+                                            Collections.singletonList(page), // <-- 수정된 부분
                                             "table",
                                             inferSectionLevel(para),
                                             mostFrequentFontSize(para),
@@ -92,7 +92,7 @@ public class HwpxConverterCLI {
                         String textContent = textBuf.toString().trim();
                         if (!textContent.isEmpty()) {
                             String textJson = buildChunkJson(
-                                    page,
+                                    Collections.singletonList(page), // <-- 수정된 부분
                                     "text",
                                     inferSectionLevel(para),
                                     mostFrequentFontSize(para),
@@ -118,7 +118,7 @@ public class HwpxConverterCLI {
 
     /* ==================== Helpers ==================== */
 
-    private static String buildChunkJson(int page,
+    private static String buildChunkJson(List<Integer> pages,
                                          String type,
                                          String sectionLevel,
                                          int fontSize,
@@ -128,7 +128,7 @@ public class HwpxConverterCLI {
 
         StringBuilder sb = new StringBuilder(256);
         sb.append("{");
-        sb.append("\"page\":").append(page).append(",");
+        sb.append("\"page\":").append(pages.toString()).append(",");
         sb.append("\"type\":\"").append(escape(type)).append("\",");
         sb.append("\"section_level\":\"").append(escape(sectionLevel)).append("\",");
 
